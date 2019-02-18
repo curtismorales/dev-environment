@@ -83,8 +83,6 @@ export NVM_DIR="/home/curtis/.nvm"
 Add to `~/.bashrc`:
 ```
 export PS1='\W \$ '
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
 ```
 
 ## SublimeText setup
