@@ -66,6 +66,8 @@ Instructions for setting up my **Ubuntu 18.04** dev environment on a Windows 10 
    IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-history"
    ```
 
+Test with `rails --version`
+
 ## nvm, node setup
 
 Install nvm, node:
@@ -78,7 +80,30 @@ export NVM_DIR="/home/curtis/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 ```
 
+## vagrant setup
+
+I haven't been able to get this working yet. Here's what I've done so far:
+
+1. Install VirtualBox on the Windows host machine and add its directory to Windows PATH
+2. Install Vagrant on Linux
+   ```
+   sudo apt-get install vagrant
+   echo 'export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"' >> ~/.bashrc
+   echo 'export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"' >> ~/.bashrc
+   source ~/.bashrc
+   vagrant plugin install vagrant-libvirt
+   sudo apt-get install qemu libvirt-bin ebtables dnsmasq-base
+   sudo apt-get install libxslt-dev libxml2-dev libvirt-dev zlib1g-dev ruby-dev
+   ```
+   
+Things will be working when I can successfully `vagrant up`
+
 ## Terminal customization
+
+Install tmux:
+```
+sudo apt-get install tmux
+```
 
 Add to `~/.bashrc`:
 ```
