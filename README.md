@@ -27,9 +27,10 @@ Instructions for setting up my **Ubuntu 18.04** dev environment on a Windows 10 
    ssh-keygen
    ```
 4. Add SSL key to github
-5. Branch autocompletion:
+5. git QOL stuff:
    ```
    sudo apt-get install git-core bash-completion
+   git config --global push.default current # auto set-upstream
    ```
 
 ## rbenv, ruby, rails setup
