@@ -69,6 +69,22 @@ Instructions for setting up my **Ubuntu 18.04** dev environment on a Windows 10 
 
 Test with `rails --version`
 
+## pyenv, python
+
+1. Follow instructions to install pyenv from https://github.com/pyenv/pyenv#basic-github-checkout
+  a. `git clone https://github.com/pyenv/pyenv.git ~/.pyenv`
+  b. Add to `.bashrc`:
+     ```
+     export PYENV_ROOT="$HOME/.pyenv"
+     export PATH="$PYENV_ROOT/bin:$PATH"
+     eval "$(pyenv init -)"
+     ```
+  c. `exec "$SHELL"`
+  d. Install dependencies: `sudo apt-get update; sudo apt-get install --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev`
+2. `pyenv install 3.8.5`
+3. `pyenv global 3.8.5`
+4. `pip install pipenv`
+
 ## nvm, node setup
 
 Install nvm, node:
